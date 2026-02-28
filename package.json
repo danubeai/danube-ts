@@ -1,0 +1,54 @@
+{
+  "name": "danube",
+  "version": "0.2.0",
+  "description": "Official TypeScript SDK for Danube AI - Tool discovery, execution, and integration for AI agents",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "danube",
+    "ai",
+    "tools",
+    "mcp",
+    "agents",
+    "sdk",
+    "typescript"
+  ],
+  "author": "Danube AI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danubeai/danube-ts"
+  },
+  "homepage": "https://danubeai.com",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  }
+}
